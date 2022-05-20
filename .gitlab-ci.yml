@@ -18,7 +18,7 @@ deploy-live:
   stage: deploy
   rules:
     - if: '$CI_COMMIT_REF_NAME == "master"'
-  image: "dinofizz/rsync-ssh"
+  image: "edbizarro/gitlab-ci-pipeline-php:8.0"
   script:
     - eval $(ssh-agent -s)
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
