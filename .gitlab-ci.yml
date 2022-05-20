@@ -20,4 +20,4 @@ deploy-live:
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - rsync -avz --delete public/* "${$SSH_CONNECTION}"
+    - rsync -avz --delete public/* $SSH_CONNECTION
