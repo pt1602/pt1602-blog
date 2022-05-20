@@ -1,18 +1,7 @@
-before_script:
-  - eval $(ssh-agent -s)
-  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-  - mkdir -p ~/.ssh
-  - chmod 700 ~/.ssh
-
-stages:
-  - build
-  - deploy
-
 build:
   stage: build
-  image: "edbizarro/gitlab-ci-pipeline-php:8.0"
+  image: "jojomi/hugo"
   script:
-    - sudo apt-get install hugo -y
     - git submodule update --init --recursive
     - hugo -D
   artifacts:
@@ -27,4 +16,7 @@ deploy-live:
     - if: '$CI_COMMIT_REF_NAME == "master"'
   image: "edbizarro/gitlab-ci-pipeline-php:8.0"
   script:
-    - rsync -avz --delete public/* $SSH_CONNECTION
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - chmod 700 ~/.ssh
+    - mkdir -p ~/.ssh
+    - rsync -avz --delete public/* "${$SSH_CONNECTION}"
