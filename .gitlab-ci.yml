@@ -1,10 +1,16 @@
+before_script:
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+
 stages:
   - build
   - deploy
 
 build:
   stage: build
-  image: "jojomi/hugo"
+  image: "klakegg/hugo"
   script:
     - git submodule update --init --recursive
     - hugo -D
@@ -20,8 +26,4 @@ deploy-live:
     - if: '$CI_COMMIT_REF_NAME == "master"'
   image: "edbizarro/gitlab-ci-pipeline-php:8.0"
   script:
-    - eval $(ssh-agent -s)
-    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
     - rsync -avz --delete public/* $SSH_CONNECTION
