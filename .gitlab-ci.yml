@@ -10,8 +10,9 @@ stages:
 
 build:
   stage: build
-  image: "klakegg/hugo"
+  image: "edbizarro/gitlab-ci-pipeline-php:8.0"
   script:
+    - sudo apt-get install hugo -y
     - git submodule update --init --recursive
     - hugo -D
   artifacts:
