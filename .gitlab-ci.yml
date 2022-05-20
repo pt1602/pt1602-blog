@@ -20,5 +20,4 @@ deploy-live:
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - echo "$SSH_HOST_KEY" > ~/.ssh/known_hosts
     - rsync -avz -e "ssh -o StrictHostKeyChecking=no" --delete public/* $SSH_CONNECTION

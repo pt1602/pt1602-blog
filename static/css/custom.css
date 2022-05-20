@@ -13,3 +13,11 @@
     --fg: var(--text-color);
     --bright-fg: #c4cbd9;
 }
+
+.content__header {
+    margin-bottom: 10px;
+}
+
+.page__body li {
+    line-height: 1.75rem;
+}

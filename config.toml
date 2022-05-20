@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://blog.pt1602.de/"
 languageCode = "en"
 title = "PT1602's Notebook"
 theme = "risotto"
