@@ -1,0 +1,30 @@
+before_script:
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: "jojomi/hugo"
+  script:
+    - git submodule update --init --recursive
+    - hugo -D
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+
+deploy-live:
+  stage: deploy
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "master"'
+  image: "dinofizz/rsync-ssh"
+  script:
+    - rsync -avz --delete public/* pt1602@pt1602.lima-ssh.de:/home/webpages/lima-city/pt1602/pt1602-2022-blog/"
+    - rsync -avz --delete public/* $SSH_CONNECTION"

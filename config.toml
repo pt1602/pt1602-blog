@@ -1,0 +1,114 @@
+baseURL = "http://example.org/"
+languageCode = "en"
+title = "PT1602's Notebook"
+theme = "risotto"
+author = "Philipp Tuchardt"
+copyright = "© Philipp Tuchardt"
+paginate = 3
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+
+[params]
+
+[params.theme]
+palette = "gruvbox-dark"
+mode = "dark-mode"
+
+# Sidebar: about/bio
+[params.about]
+title = "PT1602's Notebook"
+description = "Saving code examples I searched multiple times."
+
+# Sidebar: social links
+# Available icon sets:
+# * FontAwesome 5 <https://fontawesome.com/> ('fas fa-' or 'fab-fa' for brands)
+# * Academicons <https://jpswalsh.github.io/academicons> ('ai ai-')
+
+[[params.socialLinks]]
+icon = "fas fa-envelope"
+title = "Email"
+url = "mailto:post@pt1602.de"
+
+[[params.socialLinks]]
+icon = "fas fa-globe"
+title = "Website"
+url = "https://pt1602.de/"
+
+[[params.socialLinks]]
+icon = "fab fa-instagram"
+title = "Instagram"
+url = "https://instagram.com/ptgrafie/"
+
+[[params.socialLinks]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/pt1602/"
+
+[[params.socialLinks]]
+icon = "fab fa-reddit"
+title = "Reddit"
+url = "https://reddit.com/u/pt1602/"
+
+
+custom_css = ["css/custom.css"]
+
+[menu]
+
+[[menu.main]]
+identifier = "src"
+name = "src"
+url = "/src/src/"
+weight = 1
+
+[[menu.main]]
+identifier = "imprint"
+name = "imprint"
+url = "/static/imprint/"
+weight = 2
+
+[[menu.main]]
+identifier = "privacy"
+name = "privacy"
+url = "/static/privacy/"
+weight = 3
+
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+# For hugo >= 0.60.0, enable inline HTML
+[markup.goldmark.renderer]
+unsafe = true
+
+[privacy]
+
+[privacy.vimeo]
+disabled = false
+simple = true
+
+[privacy.twitter]
+disabled = false
+enableDNT = true
+simple = true
+
+[privacy.instagram]
+disabled = false
+simple = true
+
+[privacy.youtube]
+disabled = false
+privacyEnhanced = true
+
+[services]
+
+[services.instagram]
+disableInlineCSS = true
+
+[services.twitter]
+disableInlineCSS = true

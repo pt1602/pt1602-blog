@@ -1,0 +1,15 @@
+:root {
+    --turquoise: #55fff5;
+    --bright-turquoise: #8afff7;
+    --green: var(--turquoise);
+    --bright-green: var(--bright-turquoise);
+
+    --text-color: #929fb9;
+
+    --bright-bg: var(--text-color);
+    --dark-bg: #212529;
+    --bg: #2c2e3a;
+
+    --fg: var(--text-color);
+    --bright-fg: #c4cbd9;
+}
