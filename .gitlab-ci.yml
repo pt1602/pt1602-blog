@@ -1,9 +1,3 @@
-before_script:
-  - eval $(ssh-agent -s)
-  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-  - mkdir -p ~/.ssh
-  - chmod 700 ~/.ssh
-
 stages:
   - build
   - deploy
@@ -26,5 +20,8 @@ deploy-live:
     - if: '$CI_COMMIT_REF_NAME == "master"'
   image: "dinofizz/rsync-ssh"
   script:
-    - rsync -avz --delete public/* pt1602@pt1602.lima-ssh.de:/home/webpages/lima-city/pt1602/pt1602-2022-blog/"
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh    - rsync -avz --delete public/* pt1602@pt1602.lima-ssh.de:/home/webpages/lima-city/pt1602/pt1602-2022-blog/"
     - rsync -avz --delete public/* $SSH_CONNECTION"
