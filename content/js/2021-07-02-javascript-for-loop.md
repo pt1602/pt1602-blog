@@ -13,6 +13,8 @@ tags:
   - loop
 
 ---
-<pre class="wp-block-code"><code>            for (let i = 0, el = logoInner.length; i &lt; el; i++) {
-                element&#91;i].innerHTML = 'Bing';
-            }</code></pre>
+```
+for (let i = 0, el = logoInner.length; i &lt; el; i++) {
+    element[i].innerHTML = 'Bing';
+}
+```
