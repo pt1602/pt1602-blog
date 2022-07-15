@@ -1,7 +1,7 @@
 ---
 title: "Keep Three Newest Files"
 date: 2022-05-24T10:41:03+02:00
-draft: true
+type: post
 ---
 
 

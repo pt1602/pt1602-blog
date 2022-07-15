@@ -1,7 +1,7 @@
 ---
 title: "History format"
 date: 2022-06-08T11:19:19+02:00
-draft: true
+type: post
 ---
 
 Set the Bash history to show a timestamp for your command history (for the current terminal session only) by using this command:

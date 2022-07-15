@@ -1,7 +1,7 @@
 ---
 title: "SSH Key"
 date: 2022-06-08T11:19:06+02:00
-draft: true
+type: post
 ---
 
 Thanks to the [talk](https://www.youtube.com/watch?v=qvdlLTyUJ5I) of [Martin Leyrer](https://martin.leyrer.priv.at/) my ssh-keys now get generated like this:
