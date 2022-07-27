@@ -6,8 +6,10 @@ draft: false
 
 * [css](/css/)
 * [docker](/docker/)
+* [html](/html/)
 * [js](/js/)
 * [linux](/linux/)
+* [random](/random/)
 * [regex](/regex/)
 * [shopware](/shopware/)
-* [random](/random/)
+* [wordpress](/wordpress/)
