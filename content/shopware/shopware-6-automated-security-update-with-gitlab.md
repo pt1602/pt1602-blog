@@ -46,7 +46,7 @@ securityUpdate:
     - composer update store.shopware.com/swagplatformsecurity
     - git checkout -b feature/security-patch-$(date +%F)
     - git add -A
-    - git commit -m "Security Update $(date +%F)" || echo "No changes to commit"
+    - git commit -m "Security Update $(date +%F)" || echo "No changes to commit"; && exit 0
     - git push --set-upstream origin feature/security-patch-$(date +%F)
 ```
 
