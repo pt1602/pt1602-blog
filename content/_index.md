@@ -11,6 +11,6 @@ searching those pages again, I decided to save some snippets here.
 # Who am I?
 
 My name is Philipp, I am a frontend developer based in the middle of germany. But I am also widely interested in other
-tech stuff like linux systems, thinkpads raspberry pis.
+tech stuff like linux systems, thinkpads and raspberry pis.
 
 

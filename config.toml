@@ -8,15 +8,17 @@ paginate = 3
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 
+custom_css = ["css/custom.css"]
+
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
 ignoreErrors = ["error-remote-getjson"]
 
 [params]
+noindex = false
 
 [params.theme]
-palette = "gruvbox-dark"
-mode = "dark-mode"
+palette = "base16-dark"
 
 # Sidebar: about/bio
 [params.about]
@@ -53,29 +55,25 @@ icon = "fab fa-reddit"
 title = "Reddit"
 url = "https://reddit.com/u/pt1602/"
 
-
-custom_css = ["css/custom.css"]
-
 [menu]
 
 [[menu.main]]
 identifier = "src"
 name = "src"
-url = "/src/src/"
+url = "/src/overview/"
 weight = 1
 
 [[menu.main]]
 identifier = "imprint"
 name = "imprint"
-url = "/static/imprint/"
+url = "https://info.pt1602.de/"
 weight = 2
 
 [[menu.main]]
 identifier = "privacy"
 name = "privacy"
-url = "/static/privacy/"
+url = "https://info.pt1602.de/"
 weight = 3
-
 
 [taxonomies]
 category = "categories"
