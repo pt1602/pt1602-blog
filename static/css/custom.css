@@ -1,17 +1,10 @@
 :root {
-    --turquoise: #55fff5;
-    --bright-turquoise: #8afff7;
-    --green: var(--turquoise);
-    --bright-green: var(--bright-turquoise);
+    --base00: #212529;
+    --base01: #1e2125;
+    --base0D: #55fff5;
+    --base0A: #8afff7;
 
-    --text-color: #929fb9;
-
-    --bright-bg: var(--text-color);
-    --dark-bg: #212529;
-    --bg: #2c2e3a;
-
-    --fg: var(--text-color);
-    --bright-fg: #c4cbd9;
+    --logo: var(--base0D);
 }
 
 .content__header {
