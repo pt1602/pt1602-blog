@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Day 4 – Array Cardio – #javascript30'
 author: pt1602
 type: post

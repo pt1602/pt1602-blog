@@ -60,7 +60,7 @@ url = "https://reddit.com/u/pt1602/"
 [[menu.main]]
 identifier = "src"
 name = "src"
-url = "/src/overview/"
+url = "/src/"
 weight = 1
 
 [[menu.main]]

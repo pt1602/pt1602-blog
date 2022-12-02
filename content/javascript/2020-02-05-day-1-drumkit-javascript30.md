@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Day 1 – Drumkit – #javascript30'
 author: pt1602
 type: post

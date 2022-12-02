@@ -2,6 +2,7 @@
 title: most basic wordpress bootstrap theme
 author: pt1602
 type: post
+draft: true
 date: 2019-11-03T20:15:41+00:00
 url: /most-basic-wordpress-bootstrap-theme/
 categories:
