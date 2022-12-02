@@ -2,6 +2,7 @@
 title: 'wordpress & bootstrap – making frontpage accessible for customizer'
 author: pt1602
 type: post
+draft: true
 date: 2019-11-05T20:12:28+00:00
 url: /wordpress-bootstrap-making-frontpage-accessible-for-customizer/
 categories:

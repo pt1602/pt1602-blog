@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Day 3 – Update CSS Variables – #javascript30'
 author: pt1602
 type: post

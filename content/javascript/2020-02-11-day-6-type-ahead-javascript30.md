@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 'Day 6 – Type Ahead – #javascript30'
 author: pt1602
 type: post

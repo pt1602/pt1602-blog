@@ -1,5 +1,5 @@
 ---
-title: Execute JS after page is fully loaded
+title: Execute Javascript after page is fully loaded
 author: pt1602
 type: post
 date: 2021-06-25T13:49:36+00:00
@@ -18,4 +18,4 @@ tags:
     // ....
 });</code></pre>
 
-<https://stackoverflow.com/questions/807878/how-to-make-javascript-execute-after-page-load>
+[Source](https://stackoverflow.com/questions/807878/how-to-make-javascript-execute-after-page-load)
