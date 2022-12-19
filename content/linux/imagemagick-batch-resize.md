@@ -31,3 +31,15 @@ before.
 ```shell
 mogrify -path ../small-jpgs -resize 30% *
 ```
+
+It is also possible to reduce the quality by adding `-quality 90` for example.
+
+```shell
+mogrify -path ../small-jpgs -quality 90 -resize 30% *
+```
+
+And if you want, you can even change the image format with `-format jpg`.
+
+```shell
+mogrify -path ../small-jpgs -quality 90 -format jpg -resize 30% *
+```
