@@ -66,13 +66,13 @@ weight = 1
 [[menu.main]]
 identifier = "imprint"
 name = "imprint"
-url = "https://info.pt1602.de/"
+url = "https://info.pt1602.de/?site=imprint"
 weight = 2
 
 [[menu.main]]
 identifier = "privacy"
 name = "privacy"
-url = "https://info.pt1602.de/"
+url = "https://info.pt1602.de/?site=privacy"
 weight = 3
 
 [taxonomies]
