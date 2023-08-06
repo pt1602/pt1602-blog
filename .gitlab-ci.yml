@@ -1,23 +1,24 @@
 build:
-  stage: build
-  image: "jojomi/hugo"
-  script:
-    - git submodule update --init --recursive
-    - hugo -D
-  artifacts:
-    paths:
-      - public
-  only:
-    - master
+    stage: build
+    image: "jojomi/hugo"
+    script:
+        - git submodule update --init --recursive
+        - hugo -D
+    artifacts:
+        paths:
+            - public
+        expire_in: 1 hour
+    only:
+        - master
 
 deploy-live:
-  stage: deploy
-  rules:
-    - if: '$CI_COMMIT_REF_NAME == "master"'
-  image: "edbizarro/gitlab-ci-pipeline-php:8.0"
-  script:
-    - eval `ssh-agent -s`
-    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
-    - rsync -avz -e "ssh -o StrictHostKeyChecking=no" --delete public/* $SSH_CONNECTION
+    stage: deploy
+    rules:
+        -   if: '$CI_COMMIT_REF_NAME == "master"'
+    image: "edbizarro/gitlab-ci-pipeline-php:8.0"
+    script:
+        - eval `ssh-agent -s`
+        - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+        - mkdir -p ~/.ssh
+        - chmod 700 ~/.ssh
+        - rsync -avz -e "ssh -o StrictHostKeyChecking=no" --delete public/* $SSH_CONNECTION

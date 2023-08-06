@@ -33,7 +33,7 @@ description = "Saving code examples I searched multiple times."
 [[params.socialLinks]]
 icon = "fas fa-envelope"
 title = "Email"
-url = "mailto:post@pt1602.de"
+url = "mailto:blog@pt1602.de"
 
 [[params.socialLinks]]
 icon = "fas fa-globe"

@@ -22,7 +22,7 @@ tags:
 ---
 What have I learned on day one?
 
-// Getting the an element based on data-kay
+// Getting the element based on data-kay
 
 <div>
   <code>const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);</code>
